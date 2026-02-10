@@ -8,6 +8,8 @@ An immersive Formula 1 companion site with drivers, teams, race calendar, standi
 [![React](https://img.shields.io/badge/React-19-20232A?logo=react&logoColor=61DAFB)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Vercel](https://img.shields.io/badge/Deploy-Vercel-000000?logo=vercel&logoColor=white)](https://vercel.com/)
+[![Live Site](https://img.shields.io/badge/Live-f1--two--alpha.vercel.app-00C7B7?logo=vercel&logoColor=white)](https://f1-two-alpha.vercel.app)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-JesseRod329%2Ff1-181717?logo=github&logoColor=white)](https://github.com/JesseRod329/f1)
 [![License: MIT](https://img.shields.io/badge/License-MIT-success.svg)](./LICENSE)
 
 </div>
