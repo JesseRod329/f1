@@ -143,6 +143,88 @@
   .animate-count-up {
     animation: count-up 2s ease-out forwards;
   }
+
+  /* Holographic Effects */
+  .hologram-grid {
+    background-image:
+      linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .hologram-scanlines {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hologram-scanlines::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 212, 255, 0.015) 2px,
+      rgba(0, 212, 255, 0.015) 4px
+    );
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  .hologram-sweep {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hologram-sweep::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(0, 212, 255, 0.06) 50%,
+      transparent 100%
+    );
+    animation: hologram-sweep 4s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 11;
+  }
+
+  .hologram-shimmer {
+    position: relative;
+  }
+
+  .hologram-shimmer::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      120deg,
+      transparent 30%,
+      rgba(0, 212, 255, 0.04) 50%,
+      transparent 70%
+    );
+    animation: hologram-shimmer 6s ease-in-out infinite;
+    mix-blend-mode: screen;
+    pointer-events: none;
+  }
+
+  .track-glow {
+    filter: drop-shadow(0 0 6px rgba(0, 212, 255, 0.6))
+            drop-shadow(0 0 20px rgba(0, 212, 255, 0.3))
+            drop-shadow(0 0 40px rgba(0, 212, 255, 0.1));
+  }
+
+  .perspective-tilt {
+    perspective: 1200px;
+    transform-style: preserve-3d;
+  }
+
+  .perspective-tilt-child {
+    transform: rotateX(8deg) rotateY(-2deg);
+  }
 }
 
 @keyframes float {
@@ -168,4 +250,20 @@
 @keyframes speed-lines {
   0% { transform: translateX(-100%); }
   100% { transform: translateX(100%); }
+}
+
+@keyframes hologram-sweep {
+  0% { transform: translateY(-100%); }
+  50% { transform: translateY(100%); }
+  100% { transform: translateY(-100%); }
+}
+
+@keyframes hologram-shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes car-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.5); }
 }
