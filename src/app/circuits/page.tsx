@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState, useCallback, useRef, useEffect } from "react";
 import { circuits, countryFlags } from "@/data/circuits";
@@ -99,9 +100,17 @@ export default function CircuitsPage() {
           animate={{ opacity: 1, y: 0 }}
           className="mb-10"
         >
-          <p className="text-f1-red font-display text-sm tracking-[0.3em] mb-3">
-            HOLOGRAPHIC VIEW
-          </p>
+          <div className="flex items-center justify-between gap-3 mb-3 flex-wrap">
+            <p className="text-f1-red font-display text-sm tracking-[0.3em]">
+              HOLOGRAPHIC VIEW
+            </p>
+            <Link
+              href="/circuits-3d"
+              className="glass px-3 py-1.5 rounded-lg text-xs text-f1-cyan border border-f1-cyan/30 hover:bg-f1-cyan/10 transition-colors"
+            >
+              Switch to 3D View
+            </Link>
+          </div>
           <h1 className="font-display text-4xl md:text-6xl font-bold text-white mb-4">
             Circuit Explorer
           </h1>

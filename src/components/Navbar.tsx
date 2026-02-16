@@ -10,7 +10,8 @@ const navLinks = [
     { href: "/drivers", label: "Drivers", icon: "🏎️" },
     { href: "/teams", label: "Teams", icon: "🔧" },
     { href: "/calendar", label: "Calendar", icon: "📅" },
-    { href: "/circuits", label: "Circuits", icon: "🗺️" },
+    { href: "/circuits", label: "Circuits 2D", icon: "🗺️" },
+    { href: "/circuits-3d", label: "Circuits 3D", icon: "🌐" },
     { href: "/standings", label: "Standings", icon: "📊" },
     { href: "/watch", label: "Watch", icon: "📺" },
 ];
