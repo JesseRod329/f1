@@ -69,6 +69,13 @@
     border: 1px solid rgba(255, 255, 255, 0.12);
   }
 
+  .glass-hud {
+    background: rgba(8, 8, 18, 0.78);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
   .glow-red {
     box-shadow: 0 0 20px rgba(225, 6, 0, 0.3), 0 0 60px rgba(225, 6, 0, 0.1);
   }
@@ -224,6 +231,15 @@
 
   .perspective-tilt-child {
     transform: rotateX(8deg) rotateY(-2deg);
+  }
+
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
   }
 }
 
